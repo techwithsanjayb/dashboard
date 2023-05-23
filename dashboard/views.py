@@ -104,13 +104,28 @@ def dashboard3(request):
         Malayalam_URL_Status = check(value['Malayalam_URL'])
         Manipuri_URL_Status = check(value['Manipuri_URL'])
 
+        Hindi_Content_Status = check_lang(value['Hindi_URL'])
+        Marathi_Content_Status = check_lang(value['Marathi_URL'])
+        Bengali_Content_Status = check_lang(value['Bengali_URL'])
+        Kannada_Content_Status = check_lang(value['Kannada_URL'])
+        Malayalam_Content_Status = check_lang(value['Malayalam_URL'])
+        Manipuri_Content_Status = check_lang(value['Manipuri_URL'])
+
         Domain_Information.objects.filter(Eng_URL=value['Eng_URL']).update(
             Hindi_Status=Hindi_URL_Status,
             Marathi_Status=Marathi_URL_Status,
             Bengali_Status=Bengali_URL_Status,
             Kannada_Status=Kannada_URL_Status,
             Malayalam_Status=Malayalam_URL_Status,
-            Manipuri_Status=Manipuri_URL_Status
+            Manipuri_Status=Manipuri_URL_Status,
+
+            Hindi_Content=Hindi_Content_Status,
+            Marathi_Content=Marathi_Content_Status,
+            Bengali_Content=Bengali_Content_Status,
+            Kannada_Content=Kannada_Content_Status,
+            Malayalam_Content=Malayalam_Content_Status,
+            Manipuri_Content=Manipuri_Content_Status,
+
         )
         print("########################################################")
         print(Domain_obj)

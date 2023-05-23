@@ -1,4 +1,4 @@
-Dashboard3 File
+Dashboard3 Filess
 
 <table border="2">
     <tr>
@@ -47,6 +47,109 @@ Dashboard3 File
         <td>{{value.Manipuri_URL}}</td>
         <td>{{value.Manipuri_Status}}</td>
         <td>{{value.Manipuri_Content}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h2>Second Table</h2>
+
+<table border="2">
+    <tr>
+        <td>Eng_URL</td>
+        <td>Eng_Status</td>
+
+        <td>Hindi_URL</td>
+        <td>Hindi_Status</td>
+
+        <td>Marathi_URL</td>
+        <td>Marathi_Status</td>
+
+        <td>Bengali_URL</td>
+        <td>Bengali_Status</td>
+
+        <td>Kannada_URL</td>
+        <td>Kannada_Status</td>
+
+        <td>Malayalam_URL</td>
+        <td>Malayalam_Status</td>
+
+        <td>Manipuri_URL</td>
+        <td>Manipuri_Status</td>
+
+    </tr>
+    {% for value in Domain_obj %}
+    <tr>
+        <td>{{value.Eng_URL}}</td>
+        <td>{{value.Eng_Status}}</td>
+
+        <td>{{value.Hindi_URL}}</td>
+        <td>{{value.Hindi_Status}}</td>
+
+        <td>{{value.Marathi_URL}}</td>
+        <td>{{value.Marathi_Status}}</td>
+
+        <td>{{value.Bengali_URL}}</td>
+        <td>{{value.Bengali_Status}}</td>
+
+        <td>{{value.Kannada_URL}}</td>
+        <td>{{value.Kannada_Status}}</td>
+
+        <td>{{value.Malayalam_URL}}</td>
+        <td>{{value.Malayalam_Status}}</td>
+
+        <td>{{value.Manipuri_URL}}</td>
+        <td>{{value.Manipuri_Status}}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+
+<h2>Third Table</h2>
+
+<table border="2">
+    <tr>
+        <td>Eng URL</td>
+        <td>Hindi URL Status</td>
+        <td>Marathi URL Status</td>
+        <td>Bengali URL Status</td>
+        <td>Kannada URL Status</td>
+        <td>Malayalam URL Status</td>
+        <td>Manipuri URL Status</td>
+    </tr>
+    {% for value in Domain_obj %}
+    <tr>
+        <td>{{value.Eng_URL}}</td>
+        <td><a href="{{value.Hindi_URL}}">{{value.Hindi_Status}}</a></td>
+        <td><a href="{{value.Marathi_URL}}">{{value.Marathi_Status}}</a></td>
+        <td><a href="{{value.Bengali_URL}}">{{value.Bengali_Status}}</a></td>
+        <td><a href="{{value.Kannada_URL}}">{{value.Kannada_Status}}</a></td>
+        <td><a href="{{value.Malayalam_URL}}">{{value.Malayalam_Status}}</a></td>
+        <td><a href="{{value.Manipuri_URL}}">{{value.Manipuri_Status}}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h2>Forth Table</h2>
+
+<table border="2">
+    <tr>
+        <td>Eng URL</td>
+        <td>Hindi Content</td>
+        <td>Marathi Content</td>
+        <td>Bengali Content</td>
+        <td>Kannada Content</td>
+        <td>Malayalam Content</td>
+        <td>Manipuri Content</td>
+    </tr>
+    {% for value in Domain_obj %}
+    <tr>
+        <td>{{value.Eng_URL}}</td>
+        <td><a href="{{value.Hindi_URL}}">{{value.Hindi_Content}}</a></td>
+        <td><a href="{{value.Marathi_URL}}">{{value.Marathi_Content}}</a></td>
+        <td><a href="{{value.Bengali_URL}}">{{value.Bengali_Content}}</a></td>
+        <td><a href="{{value.Kannada_URL}}">{{value.Kannada_Content}}</a></td>
+        <td><a href="{{value.Malayalam_URL}}">{{value.Malayalam_Content}}</a></td>
+        <td><a href="{{value.Manipuri_URL}}">{{value.Manipuri_Content}}</a></td>
     </tr>
     {% endfor %}
 </table>
