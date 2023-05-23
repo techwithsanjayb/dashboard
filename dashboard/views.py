@@ -97,9 +97,21 @@ def dashboard3(request):
     Domain_obj = Domain_Information.objects.values()
     # print(Domain_obj)
     for value in Domain_obj:
-        status = check(value['Hindi_URL'])
-        print("STATUS IS ", status)
-        Domain_Information.objects.filter(Hindi_URL=value['Hindi_URL']).update(Hindi_Status=status)
+        Hindi_URL_Status = check(value['Hindi_URL'])
+        Marathi_URL_Status = check(value['Marathi_URL'])
+        Bengali_URL_Status = check(value['Bengali_URL'])
+        Kannada_URL_Status = check(value['Kannada_URL'])
+        Malayalam_URL_Status = check(value['Malayalam_URL'])
+        Manipuri_URL_Status = check(value['Manipuri_URL'])
+
+        Domain_Information.objects.filter(Eng_URL=value['Eng_URL']).update(
+            Hindi_Status=Hindi_URL_Status,
+            Marathi_Status=Marathi_URL_Status,
+            Bengali_Status=Bengali_URL_Status,
+            Kannada_Status=Kannada_URL_Status,
+            Malayalam_Status=Malayalam_URL_Status,
+            Manipuri_Status=Manipuri_URL_Status
+        )
         print("########################################################")
         print(Domain_obj)
     Domain_obj = Domain_Information.objects.values()
